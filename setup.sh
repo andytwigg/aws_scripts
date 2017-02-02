@@ -9,7 +9,7 @@ if [ -z ${AWS_HOST+x} ]; then echo "error: AWS_HOST variable not set"; exit 1; f
 if [ ! -f $CUDNN_FILE ]; then echo "error: $CUDNN_FILE not found"; exit 1; fi
 
 echo "SCP to $AWS_HOST.."
-scp -i ~/isdc.pem *.sh $CUDNN_FILE ubuntu@$AWS_HOST:~
+scp -i $KEY *.sh $CUDNN_FILE ubuntu@$AWS_HOST:~
 
 echo "SSH and executing setup script.."
-ssh -i ~/isdc.pem ubuntu@$AWS_HOST "bash $SETUP_SCRIPT"
+ssh -i $AWS_PEM_KEY ubuntu@$AWS_HOST "bash $SETUP_SCRIPT"

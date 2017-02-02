@@ -7,12 +7,17 @@ Get CUDNN-8.0 by logging into nivida account and downloading cuDNN
 
 ```
 export AWS_HOST=<public_host_ip>
-export KEY=<path to key>
+export AWS_PEM_KEY=<path to key>
 
 ./setup.sh
 ```
+This will finish with rebooting for cuda install.
 
-This will reboot for cuda install
+Test with eg
+```
+git clone https://github.com/tensorflow/tensorflow.git
+python -m tensorflow.models.image.mnist.convolutional
+```
 
 # jupyter server
 
