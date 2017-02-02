@@ -3,7 +3,7 @@
 This works on ubuntu server 14.x/16.x
 
 Get CUDNN-8.0 by logging into nivida account and downloading cuDNN
-# https://developer.nvidia.com/rdp/cudnn-download
+`https://developer.nvidia.com/rdp/cudnn-download`
 
 ```
 export AWS_HOST=<public_host_ip>
