@@ -50,6 +50,13 @@ set-window-option -g mode-mouse on
 set-option -g mouse-select-pane on
 set-option -g mouse-select-window on' >> ~/.tmux.
 
+jupyter notebook --generate-config
+
+export LOCAL_IP=`dig +short myip.opendns.com @resolver1.opendns.com`
+echo "run nohup jupyter notebook --no-browser"
+echo "browse to https://$LOCAL_IP:8888"
 
 # reboot for cuda
-sudo reboot
+echo "PLEASE REBOOT"
+# sudo reboot
+
